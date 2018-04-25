@@ -1,0 +1,6 @@
+Messages:
+  payment declined:
+    title:
+      en: Oh. There was a problem
+    description:
+      en: As your payment was not authorised we could not complete your reservation. Please ensure that the information was correct or use a new payment to try again

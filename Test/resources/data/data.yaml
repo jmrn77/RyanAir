@@ -1,0 +1,30 @@
+Pages:
+  HomePage:
+    url: https://www.ryanair.com/ie/en
+
+Users:
+  user_testing:
+    email: josemiguel.rodrigueznaranjo@gmail.com
+    password: RyanAirTest1
+    title: Mr
+    name: Jose
+    surname: Rodriguez
+    phone:
+      country: Spain
+      number: 666777888
+    cards:
+      invalid:
+        number: 5555555555555557
+        type: MasterCard
+        expiry:
+          month: 10
+          year: 18
+        securityCode: 265
+        name: JOSE MIGUEL RODRIGUEZ NARANJO
+    adresses:
+      main:
+        line1: Street Name
+        line2:
+        city: Madrid
+        postCode: 28080
+        country: Spain

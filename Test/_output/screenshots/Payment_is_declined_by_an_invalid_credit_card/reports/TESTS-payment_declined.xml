@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="1" failures="0" hostname="sg-3431.hi.inet" name="payment_declined.Payment Declined" skipped="0" tests="1" time="15.009063" timestamp="2018-04-25T16:16:11.349767"><testcase classname="payment_declined.Payment Declined" name="Payment is declined by an invalid credit card" status="failed" time="15.009063"><error message="Message: timeout&#10;  (Session info: chrome=66.0.3359.117)&#10;  (Driver info: chromedriver=2.38.551581 (2c9c29527ada10af4745ab26dd000ebb6d5e055e),platform=Mac OS X 10.13.2 x86_64)&#10;" type="TimeoutException">
+<![CDATA[
+Failing step: Given I navigate to "HomePage" ... failed in 15.009s
+Location: features/payment/payment_declined.feature:7
+Traceback (most recent call last):
+  File "/Users/josem.rodriguezn/RyanAir/VirtualEnv/RyanAir/lib/python2.7/site-packages/behave/model.py", line 1329, in run
+    match.run(runner.context)
+  File "/Users/josem.rodriguezn/RyanAir/VirtualEnv/RyanAir/lib/python2.7/site-packages/behave/matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "/Users/josem.rodriguezn/RyanAir/Test/common/steps/custom_steps.py", line 9, in navigate_url
+    context.driver.get(context.data['Pages'][resource]['url'])
+  File "/Users/josem.rodriguezn/RyanAir/VirtualEnv/RyanAir/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/Users/josem.rodriguezn/RyanAir/VirtualEnv/RyanAir/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/Users/josem.rodriguezn/RyanAir/VirtualEnv/RyanAir/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: chrome=66.0.3359.117)
+  (Driver info: chromedriver=2.38.551581 (2c9c29527ada10af4745ab26dd000ebb6d5e055e),platform=Mac OS X 10.13.2 x86_64)
+
+]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+
+  @TC-1 @US-100 @payment @declined
+  Scenario: Payment is declined by an invalid credit card
+    Given I navigate to "HomePage" ... failed in 15.009s
+    Given I make a booking from "Dublin" to "Liverpool" for tomorrow ... skipped in 0.000s
+    When I pay for booking with data of "user_testing" and credit card "invalid" ... skipped in 0.000s
+    Then I should get "payment declined" message ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
